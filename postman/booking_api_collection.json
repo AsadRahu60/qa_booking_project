@@ -1,0 +1,38 @@
+{
+    "info": {
+        "name": "Booking API Test Collection",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "Create Booking",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json",
+                        "type": "text"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n    \"firstname\": \"Asad\",\n    \"lastname\": \"Rahoo\",\n    \"totalprice\": 150,\n    \"depositpaid\": true,\n    \"bookingdates\": {\n        \"checkin\": \"2025-08-01\",\n        \"checkout\": \"2025-08-05\"\n    },\n    \"additionalneeds\": \"Breakfast\"\n}"
+                },
+                "url": {
+                    "raw": "https://restful-booker.herokuapp.com/booking",
+                    "protocol": "https",
+                    "host": [
+                        "restful-booker",
+                        "herokuapp",
+                        "com"
+                    ],
+                    "path": [
+                        "booking"
+                    ]
+                }
+            },
+            "response": []
+        }
+    ]
+}
